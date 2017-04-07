@@ -1,5 +1,5 @@
-#ifndef queue
-#define queue
+#ifndef _queue
+#define _queue
 
 // stores the currently queued requests as an array of boolean values.
 // [floor 1?, floor 2?, floor 3?]

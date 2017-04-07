@@ -1,5 +1,5 @@
-#ifndef control
-#define control
+#ifndef queue
+#define queue
 
 // stores the currently queued requests as an array of boolean values.
 // [floor 1?, floor 2?, floor 3?]

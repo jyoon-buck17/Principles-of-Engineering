@@ -12,11 +12,11 @@ int indMode[3] = {0, 0, 0};
 
 // counter used for indicator timing
 int indicatorTick = 0;
-// speed of flashing (in ticks)
-int flashSpeed = 4096;
 
 // refreshes the indicator LEDs, updating them if necessary
 void doIndicateTick() {
+  // speed of flashing (in ticks)
+  int flashSpeed = 4096;
   // iterate through each LED
   for (int flr = 0; flr < 3; ++flr) {
     switch (indMode[flr]) {
@@ -30,7 +30,7 @@ void doIndicateTick() {
         /* falls through */
       case 3:
         // led is flashing quickly
-        if (indicatorTick % flashSpeed > flashSpeed / 2)
+        if ((indicatorTick % flashSpeed) > (flashSpeed / 2))
           turnLEDOn(ind[flr]);
         else
           turnLEDOff(ind[flr]);

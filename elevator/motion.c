@@ -73,6 +73,12 @@ void doReset() {
 //    to find the value of floors[]. change the literals on elevator.c:23.
 void calibrate() {
   resetOnly();
+  go(speedSlow * up);
+
+  while (SensorValue[resetSw]) {}
+
+  delay(0.25);
+  go(0);
   // until the reset switch is pressed, perform manual calibration
   while (!SensorValue[resetSw]) {
       if (SensorValue[call0]) {

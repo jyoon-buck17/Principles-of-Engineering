@@ -40,6 +40,10 @@ int resetDelay = 10000;
 // main loop
 task main() {
 
+	calibrate();
+
+	while (SensorValue[resetSw]) {}
+
   // to start, reset everything.
   // moves down and recalibrates the floors.
   doReset();
